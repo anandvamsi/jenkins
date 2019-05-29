@@ -204,3 +204,4 @@ Execute the steps in this stage in a newly created container using a different i
 
 References
 https://jenkins.io/doc/book/pipeline/syntax/
+https://medium.com/@weblab_tech/how-to-publish-artifacts-in-jenkins-f021b17fde71
