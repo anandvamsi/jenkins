@@ -1,10 +1,10 @@
 Jenkins Pipeline is a suite of plugins that supports implementing and integrating continuous delivery pipelines into Jenkins
 
-Prerequisties
+Prerequistiess
 Jenkins 2.x or later
 Pipeline plugin, [2] which is installed as part of the "suggested plugins" 
 
-Defining pipelines
+Defining pipeliness
 Both Declarative
 Scripted Pipeline
 are DSLs [1] to describe portions of your software delivery pipeline. Scripted Pipeline is written in a limited form of Groovy syntax.
