@@ -1,0 +1,24 @@
+
+
+Preparing Jenkins for the Sonarqube
+
+1. Install jenkins as per the doc
+2. Install java-1.8.0-openjdk-devel,git
+3. In the Jenkins UI, Intall the jenkins plugin Sonarqube scanner for Jenkins and restart the jenkins
+4. Create a Maven project 
+
+setting
+Under the BUILD section 
+Root POM ::pom.xml
+Goals and options ::clean package
+Post Steps: Run regardless of the result
+
+Under Post-build Actions
+Select SonarQube with Maven
+
+Select the git repo
+https://github.com/kdpthecoder/JavaRepo.git
+
+Build the JOB, click on the sonarcubeURL on the console output.
+
+

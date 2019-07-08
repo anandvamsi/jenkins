@@ -1,0 +1,58 @@
+
+
+1.sudo yum install wget -y
+2.wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+sudo rpm -ivh mysql-community-release-el7-5.noarch.rpm
+sudo yum update -y
+
+3.yum install mysql-server
+4.systemctl start mysqld
+5. mysql_secure_installation
+6.mysql -u root -p
+SHOW GLOBAL VARIABLES LIKE 'storage_engine'
+
+7.CREATE USER 'sonarqube'@'localhost' IDENTIFIED BY 'password';
+CREATE DATABASE sonarqube;
+8.GRANT ALL PRIVILEGES ON sonarqube.* TO 'sonarqube'@'localhost';
+9. vim /etc/my.cnf
+query_cache_size = 15M
+
+##Download sonarcube
+
+prenotes: Create a user sonar and set password
+
+1.cd /opt 
+sudo wget https://sonarsource.bintray.com/Distribution/sonarqube/sonarqube-6.0.zip
+
+2.sudo yum install unzip -y
+sudo yum install java-1.8.0-openjdk -y
+
+3.sudo unzip sonarqube-6.0.zip
+mv sonarqube-6.0 sonarqube
+
+4.vim /opt/sonarqube/conf/sonar.properties
+
+sonar.jdbc.username=sonarqube                                                                                                                     
+sonar.jdbc.password=password
+sonar.jdbc.url=jdbc:mysql://localhost:3306/sonarqube?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance 
+
+sonar.web.host=0.0.0.0
+sonar.web.port=80
+sonar.web.context=/sonar
+
+chown-R sonar:sonar /opt/onarqube
+
+5. cd /opt/sonarqube/bin/linux-x86-64
+./sonar.sh start
+
+6.Bydefault sonarcube will listen on the port 9000
+
+Notes if sonarqube is not start you can debug with below command
+./sonar.sh console
+
+
+
+
+
+
+
