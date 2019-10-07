@@ -1,0 +1,13 @@
+Jenkins installation 
+
+-------------------
+
+sudo yum install epel-release
+sudo yum update
+sudo yum install java-1.8.0-openjdk.x86_64
+sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+ yum install jenkins
+ sudo systemctl start jenkins
+sudo systemctl enable jenkins
+sudo systemctl status jenkins
