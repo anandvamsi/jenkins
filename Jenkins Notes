@@ -1,0 +1,33 @@
+what is jenkins 
+what is  CI/CD process
+Installation of Jenkins
+Jenkins Job
+
+
+
+#Installation of Jenkins using docker.
+docker run -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts-jdk11
+Notes:- password will be available during the container creation/spin 
+
+#Plugins installation 
+Install the suggested plugins 
+
+
+Jenkins Jobs
+#Different types of jobs in jenkins 
+1. Free style project ::-  more like a black slate we can create what ever project we want from Freestyle
+
+2. Pipeline 
+
+3. MultiConfigration  piples
+Same job with different configrations 
+
+4. Folders
+Creates a container that store nested items, grouping things together.
+
+
+FreeStyle project
+------------------
+select Free Style project
+Under the Execute shell , Execute the command echo "Hello from jenkins"
+Build now
