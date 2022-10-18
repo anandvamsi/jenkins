@@ -31,3 +31,15 @@ FreeStyle project
 select Free Style project
 Under the Execute shell , Execute the command echo "Hello from jenkins"
 Build now
+
+
+
+To install maven inside the container
+---------------
+docker exec -it -u root <container-id> /bin/bash
+apt-get install maven
+
+
+Writing pipeline code
+
+
