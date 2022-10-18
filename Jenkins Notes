@@ -41,5 +41,37 @@ apt-get install maven
 
 
 Writing pipeline code
+----------------------
+pipeline {
+agent any 
+       stages {
+       stage("Clean up") {
+                steps {
+                      deleteDir()
+                }
+       
+        }
+        stage("clone Repo")  { 
+             steps {
+                 sh "git clone <git clone URL>"
+                          }
+         }
+         
+         stage("build"){
+               steps  {
+               dir("dir path of the cloned git")
+               sh "mvn clean install"
+               }
+         
+         }
+         
+             
+       
+       }
+
+}
+
+
+stage:- when jenkins run a pipeline it creates a folder, having the first step as clean remove all the old debris
 
 
