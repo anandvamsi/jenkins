@@ -9,6 +9,9 @@ Jenkins Job
 docker run -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts-jdk11
 Notes:- password will be available during the container creation/spin 
 
+jenkins password locations
+ cat /var/jenkins_home/secrets/initialAdminPassword #inside the container
+
 #Plugins installation 
 Install the suggested plugins 
 
@@ -25,6 +28,9 @@ Same job with different configrations
 4. Folders
 Creates a container that store nested items, grouping things together.
 
+ 
+
+
 
 FreeStyle project
 ------------------
@@ -33,45 +39,10 @@ Under the Execute shell , Execute the command echo "Hello from jenkins"
 Build now
 
 
-
-To install maven inside the container
----------------
-docker exec -it -u root <container-id> /bin/bash
+#maven installation
+docker exec -it -u root 295b714294c3 /bin/bash :- login to docker as the root user
+apt-get update
 apt-get install maven
 
-
-Writing pipeline code
-----------------------
-pipeline {
-agent any 
-       stages {
-       stage("Clean up") {
-                steps {
-                      deleteDir()
-                }
-       
-        }
-        stage("clone Repo")  { 
-             steps {
-                 sh "git clone <git clone URL>"
-                          }
-         }
-         
-         stage("build"){
-               steps  {
-               dir("dir path of the cloned git")
-               sh "mvn clean install"
-               }
-         
-         }
-         
-             
-       
-       }
-
-}
-
-
-stage:- when jenkins run a pipeline it creates a folder, having the first step as clean remove all the old debris
 
 
