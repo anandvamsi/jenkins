@@ -18,15 +18,32 @@ Install the suggested plugins
 
 Jenkins Jobs
 #Different types of jobs in jenkins 
-1. Free style project ::-  more like a black slate we can create what ever project we want from Freestyle
 
-2. Pipeline 
+FreeStyle Project 
+---------------
+Usecase:- when you want execute any shell scripts, more lile stopping/starting servers
+ssh scripts,backups
 
-3. MultiConfigration  piples
-Same job with different configrations 
+Pipelines:- Earlier know as pipelines
+---------------------------------------
+Run more jobs one after other or parallel builds
 
-4. Folders
-Creates a container that store nested items, grouping things together.
+Multi-Configruration Project
+------------------------------
+Testing Multipe environments, windows/Linux
+
+Folders
+--------
+seperate namespace for different types of projects.
+
+Github Organizations
+--------------------
+It can scan entire respository of the user Account
+
+Multibranch pipelines
+----------------------
+It will create seperate pipelines for each branch created in the SCM
+
 
  
 
@@ -37,6 +54,7 @@ FreeStyle project
 select Free Style project
 Under the Execute shell , Execute the command echo "Hello from jenkins"
 Build now
+
 
 
 #maven installation
