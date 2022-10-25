@@ -68,6 +68,10 @@ Pipelines jobs vs freeStyle jobs
 --------------
 Helps to combines all the free style jobs into single into a single defination as a code
 Another different is , pipeline jobs resumes back even if the jenkins got killed whereas freestyle job won't 
+Free style jobs dont have clue what was running before/prior 
+Durable::- Pipeliness can survicve both planned and unplanned restarts of your jenkins controller
+Pausable::- Pipelines can optionally pause stop/wait for human output
+Extensible::- Pipelines plugins suports custom extentions to its DSL
 
 
 
