@@ -2,7 +2,7 @@ what is jenkins
 what is  CI/CD process
 Installation of Jenkins
 Jenkins Job
-
+Pipelines jobs
 
 
 #Installation of Jenkins using docker.
@@ -61,6 +61,13 @@ Build now
 docker exec -it -u root 295b714294c3 /bin/bash :- login to docker as the root user
 apt-get update
 apt-get install maven
+
+
+
+Pipelines jobs vs freeStyle jobs 
+--------------
+Helps to combines all the free style jobs into single into a single defination as a code
+Another different is , pipeline jobs resumes back even if the jenkins got killed whereas freestyle job won't 
 
 
 
