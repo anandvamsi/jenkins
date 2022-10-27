@@ -1,0 +1,44 @@
+what is Maven
+How to install Maven
+
+
+Maven? what is need maven
+-------
+Maven is a build tool, under the Apache Licence.
+Maven also helps in creating reports, documentation,Packaging 
+
+Maven solves deps(jar files), thirdparty libs of the java project.
+- mysql jars, selemium jars
+
+what Maven solves:
+
+problem 1:
+without Maven we need to download all the jars from different websites and attach to the project
+which is a manual tasks
+
+problem2:-
+if we want to upgrade the jars/lib we need to remove all the existing jars and download the latest
+jars from different websites
+
+Solution
+------------
+Above problems are solved by integrating maven as the part of the project which will downlod
+deps/libs
+
+
+
+
+
+pom.xml::- Two important sections of Pom.xml is the mention the deps and Package name
+- deps
+- plugins
+
+- need to mention the dependencies
+  - Group id:- com.anand
+  - Artifactid :- demo
+  - Package:- com.anand.demo.web
+  
+  whenever we work with maven, we need to make sure we do have internet do downloads the deps, for the first time all the deps are downloaded from internet
+  and caches in the local reposiotry 
+  But change in version/Upgration of the jar
+  
