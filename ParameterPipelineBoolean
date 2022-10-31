@@ -1,0 +1,18 @@
+pipeline {
+agent any 
+    parameters {
+        booleanParam(defaultValue: false, description: 'This is my first value', name: 'userBoolean')
+        
+    }
+    stages{
+        stage("stage1") {
+            steps {
+            echo "flag is ${params.userBoolean}"
+            
+            }
+
+         }
+    }
+}
+
+
