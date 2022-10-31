@@ -1,0 +1,20 @@
+pipeline {
+agent any 
+      environment {
+             def myName =  "Hello world"
+             def myNumber =  10
+             def myBool = true
+      }
+
+    stages{
+        stage("stage1") {
+            steps {
+            echo "The Name is ${myName}"
+            echo "The Number is ${myNumber}"
+            echo "The Boolean value is ${myBool}"
+            
+            }
+
+         }
+    }
+}
