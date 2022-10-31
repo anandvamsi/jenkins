@@ -1,0 +1,18 @@
+pipeline {
+agent any 
+    parameters {
+        string(defaultValue: 'Test', description: 'Env selection', name: 'userEnv')
+        
+    }
+    stages{
+        stage("stage1") {
+            steps {
+            echo "flag is ${params.userEnv}"
+            
+            }
+
+         }
+    }
+}
+
+
