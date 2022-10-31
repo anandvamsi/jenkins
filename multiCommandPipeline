@@ -1,0 +1,17 @@
+#using """ for exeuting mulitple commands 
+
+pipeline {
+    agent any
+    stages {
+         stage("MultiCommands") {
+            steps {
+            sh """
+            date 
+            hostname
+            uname
+            """
+            }
+
+         }
+    }
+}
