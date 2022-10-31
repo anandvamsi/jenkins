@@ -1,0 +1,15 @@
+pipeline {
+agent any 
+     
+    stages{
+        stage("stage1") {
+            steps {
+            echo "The Build number is  ${env.BUILD_NUMBER}"
+            echo "The ID is  ${env.BUILD_ID}"
+            echo "The url is ${env.BUILD_TAG}"
+            
+            }
+
+         }
+    }
+}
