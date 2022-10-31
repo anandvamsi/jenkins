@@ -1,0 +1,18 @@
+pipeline {
+agent any 
+    parameters {
+        choice(choices: ['us-east-1', 'us-west-1'],description: 'which region', name: 'region')
+        
+    }
+    stages{
+        stage("stage1") {
+            steps {
+            echo "The AZ is ${params.region}"
+            
+            }
+
+         }
+    }
+}
+
+
