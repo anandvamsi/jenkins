@@ -4,13 +4,27 @@ Installation of Jenkins
 Jenkins Job
 Pipelines jobs
 
+what is jenkins
+
+
+what is CI/CD?
+Continious Integration:
+when jenkins will pull the code and build the code using maven/other build tools::- automatically
+
+Continious deployment :
+when we deploy the code automatically till the production environemnt
+
+Continious delivery
+when we deploy till stagging environment and seeks approvals for production environemnt
+
+
 
 #Installation of Jenkins using docker.
 docker run -p 8080:8080 -p 50000:50000 --restart=on-failure -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts-jdk11
 Notes:- password will be available during the container creation/spin 
 
 jenkins password locations
- cat /var/jenkins_home/secrets/initialAdminPassword #inside the container
+cat /var/jenkins_home/secrets/initialAdminPassword #inside the container
 
 #Plugins installation 
 Install the suggested plugins 
