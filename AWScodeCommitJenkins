@@ -1,0 +1,19 @@
+This is for Jenkins to code commit(where code commit act as the code repository)
+
+step1:- Create a AWS commit repository.
+keep the HTTPS url handy
+
+step2:- Create a IAM user 
+      - with no access to AWS web UI 
+      - Create only "HTTPS Git credentials for AWS CodeCommit"
+            - This will provide the username and password ---- save it aside
+            
+ step3: In jenkins Create a Maven project and copy the github URL copied in the step1
+        Create a credential with username and password and provide username/password captured in step2.
+        
+   
+  step4: In build section; mention the pom.xml path
+  
+  step5: In the section "Goals and options" mention mvn clean install
+  
+  step5: Build Job
