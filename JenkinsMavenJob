@@ -1,0 +1,17 @@
+step1:- In jenkins install the maven plugin
+Name of the plugin "PipelineMavenIntegration"
+
+step2:- Install Maven package in the Jenkins Linux server
+https://maven.apache.org/download.cgi
+Download Maven tarball and unpack it
+
+step3: Configure Maven home in Jenkins "configureTools"
+Mention the home dir of maven "/opt/apache-maven-3.9.1"
+
+step4:- IN jenkins Create a new Maven Job
+- Mention the git repository
+- In Buid section 
+        - Root POM : POX.xml
+        - Goals and options :- clean install
+        
+ step5: Trigger build
