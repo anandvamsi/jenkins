@@ -11,7 +11,7 @@ Mention the home dir of maven "/opt/apache-maven-3.9.1"
 step4:- IN jenkins Create a new Maven Job
 - Mention the git repository
 - In Buid section 
-        - Root POM : POX.xml
+        - Root POM : pom.xml
         - Goals and options :- clean install
         
  step5: Trigger build
