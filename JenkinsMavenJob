@@ -14,4 +14,6 @@ step4:- IN jenkins Create a new Maven Job
         - Root POM : pom.xml
         - Goals and options :- clean install
         
+ clean install means it will clean old builds and install means it packages a new build
+        
  step5: Trigger build
