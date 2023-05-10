@@ -8,3 +8,7 @@ There are several Build triggers in Jenkins.
        - based on the cron job irrespective of the git commit changes
        
 - GitHub hook triggers for GITScm polling
+
+- "POLL SCM"
+ "Poll SCM" polls the SCM periodically for checking if any changes/ new commits were made and shall build the project
+ if any new commits were pushed since the last build.
