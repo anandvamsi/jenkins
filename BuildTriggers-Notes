@@ -1,0 +1,10 @@
+There are several Build triggers in Jenkins.
+
+- Build whenver a SNAPSHOT dependency is built 
+    - This is more like a manual build
+- Build after other projects are build
+       - option like building one after the other build
+-  Build Periodically 
+       - based on the cron job irrespective of the git commit changes
+       
+- GitHub hook triggers for GITScm polling
