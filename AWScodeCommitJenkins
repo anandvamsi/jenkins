@@ -1,4 +1,4 @@
-##his is for Jenkins to code commit(where code commit act as the code repository)
+###his is for Jenkins to code commit(where code commit act as the code repository)
 
 step1:- Create a AWS commit repository.
 keep the HTTPS url handy
