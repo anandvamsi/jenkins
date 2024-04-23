@@ -16,9 +16,15 @@ In the jenkins, Navigate Dashboard--> ManageJenkins-->Tools--> Maven ; Maven sec
 provide the gitpath "/usr/bin/git"
 
 ### Create a new Maven Job
-In the Git repository mention the giturl and under the Maven section
+In the Git repository sectionmention the giturl 
+```bash
+https://github.com/anandvamsi/maven-web-app
+```
+under the Maven section
+```bash
 - Root POM : pom.xml
 - Goals and options :- clean install
+```
 Note::  clean install means it will clean old builds and install means it packages a new build
 
 ### Trigger build
