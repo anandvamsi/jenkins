@@ -29,9 +29,28 @@ deps/libs
 
 
 
+
+
+
 pom.xml::- Two important sections of Pom.xml is the mention the deps and Package name
 - deps
 - plugins
+
+## Maven commands
+```bash
+mvn clean install
+```
+- Clean: Removes the target directory.
+- Compilation: Compiles the source code files (.java files) found in the project's source directory (src/main/java) into bytecode (.class files).
+- Testing: Executes any tests configured in the project (usually located in the src/test/java directory).
+- Packaging: Packages the compiled classes, along with any required resources, into an archive file (JAR, WAR, etc.), depending on the project's packaging configuration in its pom.xml file.
+- Installation: Installs the generated artifact(s) into the local Maven repository.
+
+```bash
+mvn package
+```
+mvn clean install: Cleans the project, builds it, and installs the resulting artifacts into the local Maven repository for use in other projects.
+mvn package: Cleans the project, builds it, and packages the resulting artifacts into an archive file, but does not install the artifacts into the local Maven repository.
 
 - need to mention the dependencies
   - Group id:- com.anand
