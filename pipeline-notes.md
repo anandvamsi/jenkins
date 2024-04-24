@@ -19,19 +19,30 @@ Best practise
 It is generally considered best practice to define the Pipeline in a Jenkinsfile which Jenkins will then load directly from source control.
 
 
-#simple pipeline
+### simple pipeline
+```bash
 
-
-pipeline {
-    agent any 
+pipeline {-------- TOP LEVEL
+    agent any ------------- WHERE TO BUILD
     stages {
-        stage('Stage 1') {
+        stage('Stage 1') {----------- SECTION where work tasks are mentioned.
             steps {
-                echo 'Hello world!' 
+                echo 'Hello world!' -------------WHAT TO BUILD
             }
         }
     }
 }
+```
+
+## Agent
+The agent directive can take different forms:
+
+agent any: This directive allows the pipeline to run on any available agent. Jenkins will select an available agent to execute the pipeline based on its availability and workload.
+agent none: This directive is used when the pipeline does not need to run on any agent. It's typically used for declarative pipelines that are only triggered manually or by external events.
+agent {...}: You can specify a specific agent or label to run the pipeline. For example:
+agent { label 'linux' }: Runs the pipeline on an agent with the label 'linux'.
+agent { docker { image 'maven:3.6.3' } }: Runs the pipeline inside a Docker container with the specified image.
+
 
 Notes:
 agent instructs Jenkins to allocate an executor (on any available agent/node in the Jenkins environment) and workspace for the entire Pipeline.
